@@ -1,0 +1,29 @@
+{
+  "name": "flixclone-server",
+  "version": "1.0.0",
+  "description": "netflix style clone",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:watch": "nodemon -r dotenv/config server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flixclone/flixclone-server.git"
+  },
+  "author": "P. Hrabos and J. Thrasher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flixclone/flixclone-server/issues"
+  },
+  "homepage": "https://github.com/flixclone/flixclone-server#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "pg": "^8.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  }
+}
