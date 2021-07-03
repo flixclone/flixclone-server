@@ -1,0 +1,19 @@
+DROP TABLE IF EXISTS users, favorites, watched;
+
+CREATE TABLE users(
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    email TEXT NOT NULL,
+    hash TEXT NOT NULL
+);
+
+CREATE TABLE favorites(
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    movie_id INT NOT NULL,
+    user_id INT NOT NULL REFERENCES users(id)
+);
+
+CREATE TABLE watched(
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    movie_id INT NOT NULL,
+    user_id INT NOT NULL REFERENCES users(id)
+);
