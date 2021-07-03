@@ -8,6 +8,9 @@ const pool = new Pool({
     ssl:{rejectUnauthorized: false}
 });
 
+pool.on('connect',()=>{
+    console.log('welcome to hell')
+})
 module.exports = pool;
 
 
