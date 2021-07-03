@@ -8,6 +8,9 @@ const pool = new Pool({
     ssl:{rejectUnauthorized: false}
 });
 
+pool.end(() => {
+    console.log('pool has ended')
+  })
 module.exports = pool;
 
 
